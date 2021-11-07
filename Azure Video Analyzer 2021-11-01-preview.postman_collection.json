@@ -1,0 +1,787 @@
+{
+	"info": {
+		"_postman_id": "5444f7af-1819-4505-b9ab-a208b7dd07fa",
+		"name": "Azure Video Analyzer 2021-11-01-preview",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Video Analyzers - List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://management.azure.com/subscriptions/{{SubscriptionId}}/resourceGroups/{{ResourceGroupName}}/providers/Microsoft.media/videoAnalyzers?api-version={{ApiVersion}}",
+					"protocol": "https",
+					"host": [
+						"management",
+						"azure",
+						"com"
+					],
+					"path": [
+						"subscriptions",
+						"{{SubscriptionId}}",
+						"resourceGroups",
+						"{{ResourceGroupName}}",
+						"providers",
+						"Microsoft.media",
+						"videoAnalyzers"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "{{ApiVersion}}",
+							"description": "API version for operation"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Video Analyzers - Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://management.azure.com/subscriptions/{{SubscriptionId}}/resourceGroups/{{ResourceGroupName}}/providers/Microsoft.media/videoAnalyzers/{{VideoAnalyzerAccountName}}?api-version={{ApiVersion}}",
+					"protocol": "https",
+					"host": [
+						"management",
+						"azure",
+						"com"
+					],
+					"path": [
+						"subscriptions",
+						"{{SubscriptionId}}",
+						"resourceGroups",
+						"{{ResourceGroupName}}",
+						"providers",
+						"Microsoft.media",
+						"videoAnalyzers",
+						"{{VideoAnalyzerAccountName}}"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "{{ApiVersion}}",
+							"description": "API version for operation"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edge Modules - List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://management.azure.com/subscriptions/{{SubscriptionId}}/resourceGroups/{{ResourceGroupName}}/providers/Microsoft.media/videoAnalyzers/{{VideoAnalyzerAccountName}}/edgeModules?api-version={{ApiVersion}}",
+					"protocol": "https",
+					"host": [
+						"management",
+						"azure",
+						"com"
+					],
+					"path": [
+						"subscriptions",
+						"{{SubscriptionId}}",
+						"resourceGroups",
+						"{{ResourceGroupName}}",
+						"providers",
+						"Microsoft.media",
+						"videoAnalyzers",
+						"{{VideoAnalyzerAccountName}}",
+						"edgeModules"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "{{ApiVersion}}",
+							"description": "API version for Ignite"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edge Modules - Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://management.azure.com/subscriptions/{{SubscriptionId}}/resourceGroups/{{ResourceGroupName}}/providers/Microsoft.media/videoAnalyzers/{{VideoAnalyzerAccountName}}/edgeModules/:EdgeModuleName?api-version={{ApiVersion}}",
+					"protocol": "https",
+					"host": [
+						"management",
+						"azure",
+						"com"
+					],
+					"path": [
+						"subscriptions",
+						"{{SubscriptionId}}",
+						"resourceGroups",
+						"{{ResourceGroupName}}",
+						"providers",
+						"Microsoft.media",
+						"videoAnalyzers",
+						"{{VideoAnalyzerAccountName}}",
+						"edgeModules",
+						":EdgeModuleName"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "{{ApiVersion}}",
+							"description": "API version for Ignite"
+						}
+					],
+					"variable": [
+						{
+							"key": "EdgeModuleName",
+							"value": "<edge module name>"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edge Modules - List Provisioning Token",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"expirationDate\": \"2022-12-01T00:00:00.0000000-00:00\"\r\n}"
+				},
+				"url": {
+					"raw": "https://management.azure.com/subscriptions/{{SubscriptionId}}/resourceGroups/{{ResourceGroupName}}/providers/Microsoft.media/videoAnalyzers/{{VideoAnalyzerAccountName}}/edgeModules/:EdgeModuleName/listProvisioningToken?api-version={{ApiVersion}}",
+					"protocol": "https",
+					"host": [
+						"management",
+						"azure",
+						"com"
+					],
+					"path": [
+						"subscriptions",
+						"{{SubscriptionId}}",
+						"resourceGroups",
+						"{{ResourceGroupName}}",
+						"providers",
+						"Microsoft.media",
+						"videoAnalyzers",
+						"{{VideoAnalyzerAccountName}}",
+						"edgeModules",
+						":EdgeModuleName",
+						"listProvisioningToken"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "{{ApiVersion}}",
+							"description": "API version for Ignite"
+						}
+					],
+					"variable": [
+						{
+							"key": "EdgeModuleName",
+							"value": "<edge module name>"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edge Modules - Create",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n}"
+				},
+				"url": {
+					"raw": "https://management.azure.com/subscriptions/{{SubscriptionId}}/resourceGroups/{{ResourceGroupName}}/providers/Microsoft.Media/videoAnalyzers/{{VideoAnalyzerAccountName}}/edgeModules/:edgeModuleName?api-version={{ApiVersion}}",
+					"protocol": "https",
+					"host": [
+						"management",
+						"azure",
+						"com"
+					],
+					"path": [
+						"subscriptions",
+						"{{SubscriptionId}}",
+						"resourceGroups",
+						"{{ResourceGroupName}}",
+						"providers",
+						"Microsoft.Media",
+						"videoAnalyzers",
+						"{{VideoAnalyzerAccountName}}",
+						"edgeModules",
+						":edgeModuleName"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "{{ApiVersion}}"
+						}
+					],
+					"variable": [
+						{
+							"key": "edgeModuleName",
+							"value": "<edge module name>"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edge Modules - Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://management.azure.com/subscriptions/{{SubscriptionId}}/resourceGroups/{{ResourceGroupName}}/providers/Microsoft.media/videoAnalyzers/{{VideoAnalyzerAccountName}}/edgeModules/:EdgeModuleName?api-version={{ApiVersion}}",
+					"protocol": "https",
+					"host": [
+						"management",
+						"azure",
+						"com"
+					],
+					"path": [
+						"subscriptions",
+						"{{SubscriptionId}}",
+						"resourceGroups",
+						"{{ResourceGroupName}}",
+						"providers",
+						"Microsoft.media",
+						"videoAnalyzers",
+						"{{VideoAnalyzerAccountName}}",
+						"edgeModules",
+						":EdgeModuleName"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "{{ApiVersion}}",
+							"description": "API version for Ignite"
+						}
+					],
+					"variable": [
+						{
+							"key": "EdgeModuleName",
+							"value": "<edge module name>"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pipeline Topology - List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://management.azure.com/subscriptions/{{SubscriptionId}}/resourceGroups/{{ResourceGroupName}}/providers/Microsoft.Media/videoAnalyzers/{{VideoAnalyzerAccountName}}/pipelineTopologies?api-version=2021-11-01-preview",
+					"protocol": "https",
+					"host": [
+						"management",
+						"azure",
+						"com"
+					],
+					"path": [
+						"subscriptions",
+						"{{SubscriptionId}}",
+						"resourceGroups",
+						"{{ResourceGroupName}}",
+						"providers",
+						"Microsoft.Media",
+						"videoAnalyzers",
+						"{{VideoAnalyzerAccountName}}",
+						"pipelineTopologies"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "2021-11-01-preview",
+							"description": "API version for Ignite"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pipeline Topology - Create Live",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"kind\": \"Live\",\r\n    \"sku\": {\r\n        \"name\": \"<name>\"\r\n    },\r\n    \"properties\": {\r\n    \"description\": \"<description>\",\r\n    \"parameters\": [\r\n        {\r\n        \"name\": \"rtspUrlParameter\",\r\n        \"type\": \"String\",\r\n        \"description\": \"rtsp source url parameter\",\r\n        \"default\": \"<default url>\"\r\n        },\r\n        {\r\n        \"name\": \"rtspPasswordParameter\",\r\n        \"type\": \"SecretString\",\r\n        \"description\": \"rtsp source password parameter\",\r\n        \"default\": \"<password>\"\r\n        }\r\n    ],\r\n    \"sources\": [\r\n        {\r\n        \"@type\": \"#Microsoft.VideoAnalyzer.RtspSource\",\r\n        \"name\": \"rtspSource\",\r\n        \"transport\": \"Http\",\r\n        \"endpoint\": {\r\n            \"@type\": \"#Microsoft.VideoAnalyzer.UnsecuredEndpoint\",\r\n            \"url\": \"${rtspUrlParameter}\",\r\n            \"credentials\": {\r\n            \"@type\": \"#Microsoft.VideoAnalyzer.UsernamePasswordCredentials\",\r\n            \"username\": \"username\",\r\n            \"password\": \"${rtspPasswordParameter}\"\r\n            }\r\n        }\r\n        }\r\n    ],\r\n    \"sinks\": [\r\n        {\r\n        \"@type\": \"#Microsoft.VideoAnalyzer.VideoSink\",\r\n        \"name\": \"<sink name>\",\r\n        \"videoName\": \"<video name>\",\r\n        \"videoCreationProperties\": {\r\n            \"title\": \"<title>\",\r\n            \"description\": \"<description>\",\r\n            \"segmentLength\": \"PT30S\"\r\n        },\r\n        \"inputs\": [\r\n            {\r\n            \"nodeName\": \"rtspSource\"\r\n            }\r\n        ]\r\n        }\r\n    ]\r\n    }\r\n}\r\n"
+				},
+				"url": {
+					"raw": "https://management.azure.com/subscriptions/{{SubscriptionId}}/resourceGroups/{{ResourceGroupName}}/providers/Microsoft.Media/videoAnalyzers/{{VideoAnalyzerAccountName}}/pipelineTopologies/:pipelineTopologyName?api-version=2021-11-01-preview",
+					"protocol": "https",
+					"host": [
+						"management",
+						"azure",
+						"com"
+					],
+					"path": [
+						"subscriptions",
+						"{{SubscriptionId}}",
+						"resourceGroups",
+						"{{ResourceGroupName}}",
+						"providers",
+						"Microsoft.Media",
+						"videoAnalyzers",
+						"{{VideoAnalyzerAccountName}}",
+						"pipelineTopologies",
+						":pipelineTopologyName"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "2021-11-01-preview"
+						}
+					],
+					"variable": [
+						{
+							"key": "pipelineTopologyName",
+							"value": "<pipeline topology name>"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Live Pipeline - List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://management.azure.com/subscriptions/{{SubscriptionId}}/resourceGroups/{{ResourceGroupName}}/providers/Microsoft.Media/videoAnalyzers/{{VideoAnalyzerAccountName}}/livePipelines?api-version=2021-11-01-preview",
+					"protocol": "https",
+					"host": [
+						"management",
+						"azure",
+						"com"
+					],
+					"path": [
+						"subscriptions",
+						"{{SubscriptionId}}",
+						"resourceGroups",
+						"{{ResourceGroupName}}",
+						"providers",
+						"Microsoft.Media",
+						"videoAnalyzers",
+						"{{VideoAnalyzerAccountName}}",
+						"livePipelines"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "2021-11-01-preview",
+							"description": "API version for Ignite"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Live Pipelines - Create",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"topologyName\": \"<topology name>\",\r\n    \"description\": \"<description>\",\r\n    \"bitrateKbps\": 500,\r\n    \"parameters\": [\r\n        {\r\n        \"name\": \"rtspUrlParameter\",\r\n        \"value\": \"rtsp://contoso.com/stream\"\r\n        }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "https://management.azure.com/subscriptions/{{SubscriptionId}}/resourceGroups/{{ResourceGroupName}}/providers/Microsoft.Media/videoAnalyzers/{{VideoAnalyzerAccountName}}/livePipelines/:livePipelineName?api-version=2021-11-01-preview",
+					"protocol": "https",
+					"host": [
+						"management",
+						"azure",
+						"com"
+					],
+					"path": [
+						"subscriptions",
+						"{{SubscriptionId}}",
+						"resourceGroups",
+						"{{ResourceGroupName}}",
+						"providers",
+						"Microsoft.Media",
+						"videoAnalyzers",
+						"{{VideoAnalyzerAccountName}}",
+						"livePipelines",
+						":livePipelineName"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "2021-11-01-preview"
+						}
+					],
+					"variable": [
+						{
+							"key": "livePipelineName",
+							"value": "<live pipeline name>"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pipeline Jobs - List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://management.azure.com/subscriptions/{{SubscriptionId}}/resourceGroups/{{ResourceGroupName}}/providers/Microsoft.Media/videoAnalyzers/{{VideoAnalyzerAccountName}}/pipelineJobs?api-version=2021-11-01-preview",
+					"protocol": "https",
+					"host": [
+						"management",
+						"azure",
+						"com"
+					],
+					"path": [
+						"subscriptions",
+						"{{SubscriptionId}}",
+						"resourceGroups",
+						"{{ResourceGroupName}}",
+						"providers",
+						"Microsoft.Media",
+						"videoAnalyzers",
+						"{{VideoAnalyzerAccountName}}",
+						"pipelineJobs"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "2021-11-01-preview",
+							"description": "API version for Ignite"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pipeline Jobs - Create",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"properties\": {\r\n        \"TopologyName\": \"<topology name>\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "https://management.azure.com/subscriptions/{{SubscriptionId}}/resourceGroups/{{ResourceGroupName}}/providers/Microsoft.Media/videoAnalyzers/{{VideoAnalyzerAccountName}}/pipelineJobs/:pipelineJobName?api-version=2021-11-01-preview",
+					"protocol": "https",
+					"host": [
+						"management",
+						"azure",
+						"com"
+					],
+					"path": [
+						"subscriptions",
+						"{{SubscriptionId}}",
+						"resourceGroups",
+						"{{ResourceGroupName}}",
+						"providers",
+						"Microsoft.Media",
+						"videoAnalyzers",
+						"{{VideoAnalyzerAccountName}}",
+						"pipelineJobs",
+						":pipelineJobName"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "2021-11-01-preview"
+						}
+					],
+					"variable": [
+						{
+							"key": "pipelineJobName",
+							"value": "<job name>"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Videos - List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://management.azure.com/subscriptions/{{SubscriptionId}}/resourceGroups/{{ResourceGroupName}}/providers/Microsoft.media/videoAnalyzers/{{VideoAnalyzerAccountName}}/videos?api-version={{ApiVersion}}",
+					"protocol": "https",
+					"host": [
+						"management",
+						"azure",
+						"com"
+					],
+					"path": [
+						"subscriptions",
+						"{{SubscriptionId}}",
+						"resourceGroups",
+						"{{ResourceGroupName}}",
+						"providers",
+						"Microsoft.media",
+						"videoAnalyzers",
+						"{{VideoAnalyzerAccountName}}",
+						"videos"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "{{ApiVersion}}",
+							"description": "API version for Ignite"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Videos - Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://management.azure.com/subscriptions/{{SubscriptionId}}/resourceGroups/{{ResourceGroupName}}/providers/Microsoft.media/videoAnalyzers/{{VideoAnalyzerAccountName}}/videos/:videoName?api-version={{ApiVersion}}",
+					"protocol": "https",
+					"host": [
+						"management",
+						"azure",
+						"com"
+					],
+					"path": [
+						"subscriptions",
+						"{{SubscriptionId}}",
+						"resourceGroups",
+						"{{ResourceGroupName}}",
+						"providers",
+						"Microsoft.media",
+						"videoAnalyzers",
+						"{{VideoAnalyzerAccountName}}",
+						"videos",
+						":videoName"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "{{ApiVersion}}",
+							"description": "API version for Ignite"
+						}
+					],
+					"variable": [
+						{
+							"key": "videoName",
+							"value": "<video name>"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Videos - Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://management.azure.com/subscriptions/{{SubscriptionId}}/resourceGroups/{{ResourceGroupName}}/providers/Microsoft.media/videoAnalyzers/{{VideoAnalyzerAccountName}}/videos/:videoName?api-version={{ApiVersion}}",
+					"protocol": "https",
+					"host": [
+						"management",
+						"azure",
+						"com"
+					],
+					"path": [
+						"subscriptions",
+						"{{SubscriptionId}}",
+						"resourceGroups",
+						"{{ResourceGroupName}}",
+						"providers",
+						"Microsoft.media",
+						"videoAnalyzers",
+						"{{VideoAnalyzerAccountName}}",
+						"videos",
+						":videoName"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "{{ApiVersion}}",
+							"description": "API version for Ignite"
+						}
+					],
+					"variable": [
+						{
+							"key": "videoName",
+							"value": "<video name>"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{bearerToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"if (!pm.collectionVariables.get(\"bearerToken\") || Date.now() > new Date(pm.collectionVariables.get(\"bearerTokenExpiresOn\") * 1000)) {",
+					"    pm.sendRequest({",
+					"        url: 'https://login.microsoftonline.com/' + pm.collectionVariables.get(\"tenant\") + '/oauth2/token',",
+					"        method: 'POST',",
+					"        header: 'Content-Type: application/x-www-form-urlencoded',",
+					"        body: {",
+					"            mode: 'urlencoded',",
+					"            urlencoded: [",
+					"                { key: \"grant_type\", value: \"client_credentials\", disabled: false },",
+					"                { key: \"client_id\", value: pm.collectionVariables.get(\"appId\"), disabled: false },",
+					"                { key: \"client_secret\", value: pm.collectionVariables.get(\"password\"), disabled: false },",
+					"                { key: \"resource\", value: \"https://management.azure.com/\", disabled: false }",
+					"            ]",
+					"        }",
+					"    }, function (err, res) {",
+					"        if (err) {",
+					"            console.log(err);",
+					"        } else {",
+					"            let resJson = res.json();",
+					"            pm.collectionVariables.set(\"bearerTokenExpiresOn\", resJson.expires_on);",
+					"            pm.collectionVariables.set(\"bearerToken\", resJson.access_token);",
+					"        }",
+					"    });",
+					"}"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "SubscriptionId",
+			"value": ""
+		},
+		{
+			"key": "ResourceGroupName",
+			"value": ""
+		},
+		{
+			"key": "VideoAnalyzerAccountName",
+			"value": ""
+		},
+		{
+			"key": "ApiVersion",
+			"value": "2021-11-01-preview"
+		},
+		{
+			"key": "appId",
+			"value": ""
+		},
+		{
+			"key": "password",
+			"value": ""
+		},
+		{
+			"key": "tenant",
+			"value": ""
+		},
+		{
+			"key": "bearerTokenExpiresOn",
+			"value": ""
+		},
+		{
+			"key": "bearerToken",
+			"value": ""
+		}
+	]
+}
