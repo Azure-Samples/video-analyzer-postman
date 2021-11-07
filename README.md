@@ -10,9 +10,9 @@ description: "Samples to show how to use Postman to call the Azure Video Analyze
 
 # Azure Video Analyzer REST API Postman samples
 
-[Postman](https://www.postman.com) is an API platform for building and using APIs. Using the Postman application is great way to try out the [Video Analyzer management REST APIs](https://docs.microsoft.com/rest/api/videoanalyzer/) without writing code using one of the SDKs, such as .NET or Python.
+[Postman](https://www.postman.com) is an API platform for building and using APIs. Using the Postman application is great way to try out and familiarize yourself with the [Video Analyzer management REST APIs](https://docs.microsoft.com/rest/api/videoanalyzer/) without writing code using one of the SDKs, such as .NET or Python.
 
-This repository contains Postman collection files that can be imported and enable some of the Video Analyzer management REST APIs to be called.
+This repository contains a Postman collection file that can be imported and allows a selection of the Video Analyzer management REST APIs to be called.
 
 ## Contents
 
@@ -20,9 +20,8 @@ This repository contains Postman collection files that can be imported and enabl
 |----------------------|--------------------------------------------|
 | Azure Video Analyzer 2021-11-01-preview.postman_collection.json | Exported Postman collection with sample API calls - API version '2021-11-01-preview'. |
 | `README.md` | This README file. |
-| `LICENSE` | The license for this sample. |
+| `LICENSE.md` | The license for this sample. |
 | `CONTRIBUTING.md` | Contribution guidelines |
-| `CODE_OF_CONDUCT.md` | Open source code of conduct |
 
 ## Prerequisites
 
@@ -30,7 +29,7 @@ The following prerequisites are required in order to setup and use this sample:
 
 - An active Azure subscription.
 - An active Video Analyzer account.
-- The [Azure CLI](https://docs.microsoft.com/cli/azure/) is installed. This will be used to create a service principal, which is needed to create tokens required to access the Video Analyzer API.
+- The [Azure CLI](https://docs.microsoft.com/cli/azure/) is installed. This will be used to create a service principal, which is needed to access the Video Analyzer API.
 - The [Postman](https://www.postman.com) application installed with basic familiarity of the application required.
 
 ## Setup
