@@ -34,7 +34,7 @@ The following prerequisites are required in order to setup and use this sample:
 
 ## Setup
 
-1. Create an Azure service principal from which tokens are obtained to authenticate with the Video Analyzer account REST APIs. The tokens will allow 'Contributor' access to a specified Video Analyzer account. The Azure documentation had a [complete description](https://docs.microsoft.com/rest/api/azure/) of how to call Azure REST APIs, including from Postman.
+1. Create an Azure service principal from which tokens are obtained to authenticate with the Video Analyzer account REST APIs. The tokens will allow 'Contributor' access to a specified Video Analyzer account. The Azure documentation has a [complete description](https://docs.microsoft.com/rest/api/azure/) of how to call Azure REST APIs, including from Postman.
     1. Use the Azure CLI to login:
         ```azurecli
         az login
@@ -47,7 +47,7 @@ The following prerequisites are required in order to setup and use this sample:
 
     1. Use the following CLI command to create the service principal that will be used to access to video analyzer account. You will need the subscription id, resource group, and name used to create the video analyzer account. Make note of the output from the CLI command and keep the output safe.
         ```azurecli
-        az ad sp create-for-rbac -n "AvaPostmanSample" --role Contributor --scopes /subscriptions/<Subscription ID>/resourceGroups/<Resource Group>//providers/Microsoft.media/videoAnalyzers/<VideoAnalyzerAccountName>
+        az ad sp create-for-rbac -n "AvaPostmanSample" --role Contributor --scopes /subscriptions/<Subscription ID>/resourceGroups/<Resource Group>/providers/Microsoft.media/videoAnalyzers/<VideoAnalyzerAccountName>
         ```
 
 1. Create a local copy of the '.postman_collection.json' export file by downloading or copying the file.
@@ -57,6 +57,7 @@ The following prerequisites are required in order to setup and use this sample:
     1. Select the 'Variables' section.
     1. Enter 'CURRENT VALUE' cell values for variables 'SubscriptionId', 'ResourceGroupName', and 'VideoAnalyzerAccountName'. These values are the same ones used with the Azure CLI to create the service principal.
     1. Using the Azure CLI output when the service principal was created, enter 'CURRENT VALUE' cell values for variables 'appId', 'password', 'tenant'. Do not enter values for 'bearerTokenExpiresOn' and 'bearerToken' - these variables are set by the pre-request script.
+    1. Save the collection, otherwise the newly entered variable values may not be used when requests are sent and an error will be displayed.
 
 ## Running API requests
 
