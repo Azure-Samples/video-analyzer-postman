@@ -45,7 +45,7 @@ The following prerequisites are required in order to setup and use this sample:
         az account set --subscription <name of your subscription>
         ```
 
-    1. Use the following CLI command to create the service principal that will be used to access to video analyzer account. You will need the subscription id, resource group, and name used to create the video analyzer account. Make note of the output from the CLI command and keep the output safe.
+    1. Use the following CLI command to create the service principal that will be used to access to Video Analyzer account. You will need the subscription ID, resource group, and name used to create the Video Analyzer account. Make note of the output from the CLI command and keep the output safe.
         ```azurecli
         az ad sp create-for-rbac -n "AvaPostmanSample" --role Contributor --scopes /subscriptions/<Subscription ID>/resourceGroups/<Resource Group>/providers/Microsoft.media/videoAnalyzers/<VideoAnalyzerAccountName>
         ```
@@ -63,8 +63,11 @@ The following prerequisites are required in order to setup and use this sample:
 
 - The sample requests are grouped by operations.
 - The 'List' requests require no further information to be configured.
-- The 'Get', 'Create', and 'Delete' requests have a variable value to be entered to identify the item, such as an edge module name. The variable values are entered in the 'Params' section.
-- The 'Create' requests have a body json with placeholder values that need to be entered. The json is entered in the 'Body' section.
+    - For example, select the 'Video Analyzers - List' request and select 'Send', no further configuration is required and details for the configured Video Analyzer account will be returned.
+- The 'Create' requests can have a both a 'Params' variable and 'Body' json that need to be entered. The json format for the the 'Body' being specified in the [REST API reference](https://docs.microsoft.com/rest/api/videoanalyzer/).
+    - For example, select the 'PipelineJobs - Create' request - the 'Params' section needs to be selected so the value for 'pipelineJobName' can be specified, then the 'Body' section needs to be selected so that the associated topology name for the pipeline job can be specified.
+- The 'Get' and 'Delete' requests have a variable value to be entered to identify the item, such as an edge module name. The variable values are entered in the 'Params' section.
+    - For example, for the 'Edge Modules - Get' request, the 'EdgeModuleName' needs to be specified in the 'Params' section.
 
 ## Resources
 
