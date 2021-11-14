@@ -18,7 +18,7 @@ This repository contains a Postman collection file that can be imported and allo
 
 | File/folder       | Description                                |
 |----------------------|--------------------------------------------|
-| Azure Video Analyzer 2021-11-01-preview.postman_collection.json | Exported Postman collection with sample API calls - API version '2021-11-01-preview'. |
+| AzureVideoAnalyzer_2021-11-01-preview.postman_collection.json | Exported Postman collection with sample API calls - API version '2021-11-01-preview'. |
 | `README.md` | This README file. |
 | `LICENSE.md` | The license for this sample. |
 | `CONTRIBUTING.md` | Contribution guidelines |
