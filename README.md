@@ -8,7 +8,11 @@ products:
 description: "Samples to show how to use Postman to call the Azure Video Analyzer management API."  
 ---
 
-# Azure Video Analyzer REST API Postman samples
+# Deprecated - Azure Video Analyzer REST API Postman samples
+
+We’re retiring the Azure Video Analyzer preview service, you're advised to transition your applications off of Video Analyzer by 01 December 2022. This repo is no longer being maintained.
+
+## Introduction
 
 [Postman](https://www.postman.com) is an API platform for building and using APIs. Using the Postman application is great way to try out and familiarize yourself with the [Video Analyzer management REST APIs](https://docs.microsoft.com/rest/api/videoanalyzer/) without writing code using one of the SDKs, such as .NET or Python.
 
